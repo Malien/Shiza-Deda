@@ -1,8 +1,7 @@
 module Main where
 
 import Data.Maybe (isJust)
-import Substitution (Substitution (Substitution))
-import qualified Substitution
+import Substitution (Substitution)
 import System.Environment (getArgs)
 import Term (Term, hTerm)
 import Unification (unify)

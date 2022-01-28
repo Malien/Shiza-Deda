@@ -32,5 +32,3 @@ apply :: Substitution a -> Term a -> Term a
 apply _ t@(Constant _) = t
 apply sub t@(Variable var) = fromMaybe t (sub !? var)
 apply sub (Application function arguments) = Application function $ apply sub <$> arguments
-
-size (Substitution mapping) = Map.size mapping
